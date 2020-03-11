@@ -15,7 +15,7 @@ spec:
       imagePullSecrets:
       - name: regcred
       nodeSelector:
-        type: basic
+        type: {nodeSelector}
       containers:
       - name: {name}
         image: {imageRepo}:{name}
