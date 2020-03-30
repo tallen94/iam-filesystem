@@ -53,7 +53,7 @@ spec:
               name: dbconfig
               key: password
         - name: DB_HOST
-          value: "mysqldatabase.default"
+          value: "mysqldatabase.admin"
         - name: DB_NAME
           valueFrom:
             secretKeyRef:

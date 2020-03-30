@@ -14,8 +14,6 @@ spec:
     spec:
       imagePullSecrets:
       - name: regcred
-      nodeSelector:
-        type: {nodeSelector}
       containers:
       - name: {name}
         image: {imageRepo}:{name}
@@ -55,22 +53,22 @@ spec:
 
         ## DB CONFIG
         - name: DB_HOST
-          value: {database}
+          value: "mysqldatabase.admin"
         - name: DB_USER
           valueFrom:
             secretKeyRef:
-              name: {database}dbuser
-              key: secret
+              name: dbconfig
+              key: user
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: {database}dbpassword
-              key: secret
+              name: dbconfig
+              key: password
         - name: DB_NAME
           valueFrom:
             secretKeyRef:
-              name: {database}dbame
-              key: secret
+              name: dbconfig
+              key: db_name
 ---
 apiVersion: v1
 kind: Service

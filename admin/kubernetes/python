@@ -55,7 +55,7 @@ spec:
 
         ## DB CONFIG
         - name: DB_HOST
-          value: "mysqldatabase.default"
+          value: "mysqldatabase.admin"
         - name: DB_USER
           valueFrom:
             secretKeyRef:

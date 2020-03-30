@@ -1,4 +1,4 @@
-select data 
+select * 
 from executable 
 where exe='environment' 
 and username={username}
