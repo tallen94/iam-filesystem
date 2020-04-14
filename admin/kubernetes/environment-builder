@@ -37,7 +37,7 @@ spec:
 
         # FS CONFIG
         - name: FS_HOST
-          value: "iam-filesystem"
+          value: "filesystem"
         - name: FS_PORT
           value: "80"
 
@@ -53,7 +53,7 @@ spec:
               name: dbconfig
               key: password
         - name: DB_HOST
-          value: "mysqldatabase.admin"
+          value: "mysqldatabase.default"
         - name: DB_NAME
           valueFrom:
             secretKeyRef:

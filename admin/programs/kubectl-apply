@@ -1,6 +1,0 @@
-#!/bin/bash
-
-FILE=$1
-USERNAME=$2
-
-kubectl apply -f http://iam-filesystem.default/fs/$USERNAME/kubernetes/$FILE
